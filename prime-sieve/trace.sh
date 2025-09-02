@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Adjust these paths if needed
-LIBC_WRAPPER="/usr/local/lib/liblttng-ust-libc-wrapper.so"
-CYG_PROFILE="/usr/local/lib/liblttng-ust-cyg-profile.so"
-FORK_WRAP="/usr/local/lib/liblttng-ust-fork.so"
+# --- By default, use the LTTng libs assuming
+# they've already been correctly added to PATH
+LIBC_WRAPPER="liblttng-ust-libc-wrapper.so"
+CYG_PROFILE="liblttng-ust-cyg-profile.so"
+FORK_WRAP="liblttng-ust-fork.so"
+
+## --- UNCOMMENT AND USE THESE ABSOLUTE PATHS IF NEEDED ---
+## if there are errors complaining unable to load the shared objects 
+# LIBC_WRAPPER="/usr/local/lib/liblttng-ust-libc-wrapper.so"
+# CYG_PROFILE="/usr/local/lib/liblttng-ust-cyg-profile.so"
+# FORK_WRAP="/usr/local/lib/liblttng-ust-fork.so"
+
 
 SESSION="prime-sieve-$(date +%Y%m%d-%H%M%S)"
 OUTDIR="${PWD}/traces/${SESSION}"

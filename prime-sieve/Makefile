@@ -7,6 +7,8 @@ trace:
 	chmod +x ./trace.sh
 	./trace.sh
 
+# manually copy traces to current folder
+# when OUTDIR is not set in trace.sh
 copy:
 	mkdir -p lttng-traces
 	sudo chmod 777 -R /root/lttng-traces
