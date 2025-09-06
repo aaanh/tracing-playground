@@ -14,7 +14,7 @@ CYG_PROFILE="liblttng-ust-cyg-profile.so"
 # FORK_WRAP="/usr/lib/x86_64-linux-gnu/liblttng-ust-fork.so"
 
 
-SESSION="prime-sieve-$(date +%Y%m%d-%H%M%S)"
+SESSION="steam-trace-$(date +%Y%m%d-%H%M%S)"
 OUTDIR="${PWD}/traces/${SESSION}"
 
 # Ensure per-user session daemon is running
@@ -35,7 +35,7 @@ export LD_PRELOAD="${CYG_PROFILE}"
 # (Optional) avoid long waits if no session present
 export LTTNG_UST_REGISTER_TIMEOUT=0
 
-./prime-sieve
+steam
 
 lttng stop
 lttng destroy

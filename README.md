@@ -9,6 +9,7 @@ TABLE OF CONTENT
 | program_name | implemented_languages | date_updated |
 | ------------ | --------------------- | ------------ |
 | prime-sieve  | C                     | 2025-08-26   |
+| fibonacci    | C                     | 2025-09-01   |
 
 
 DISCLAIMER
